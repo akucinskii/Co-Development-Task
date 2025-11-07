@@ -95,7 +95,7 @@ class MapPlugin implements Plugin {
       if (marker) {
         const startLatLng = marker.getLatLng();
         const endLatLng = L.latLng([markerData.lat, markerData.lng]);
-        const duration = 10000; // 10 second
+        const duration = 3000; // 10 second
         const startTime = performance.now();
 
         const animateMarker = (currentTime: number) => {
