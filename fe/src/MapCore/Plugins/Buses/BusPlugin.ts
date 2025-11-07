@@ -44,7 +44,7 @@ class BusPlugin implements Plugin {
   async fetchData(initialFetch?: boolean): Promise<void> {
     const apiUrl = import.meta.env.VITE_API_URL;
     try {
-      const response = await fetch(apiUrl + this.options.path);
+      const response = await fetch("https://api.buses.kinggred.org/buses");
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
